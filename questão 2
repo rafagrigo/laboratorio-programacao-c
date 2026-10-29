@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <string.h>
+
+int main(void) {
+    char produto[40];
+    char categoria[30];
+    char produto_copia[40];
+    char descricao[80] = "Produto: ";
+
+    printf("===== CADASTRO DE PRODUTOS =====\n");
+    printf("Nome do produto: ");
+    scanf("%39s", produto);
+    printf("Categoria: ");
+    scanf("%29s", categoria);
+
+    strcpy(produto_copia, produto);
+    strcat(descricao, produto);
+
+    printf("\n===== RESUMO =====\n");
+    printf("Produto: %s\n", produto_copia);
+    printf("Caracteres: %zu\n", strlen(produto));
+
+    // Aceita tanto "PERIFERICO" quanto "periferico"
+    if (strcmp(categoria, "PERIFERICO") == 0 || strcmp(categoria, "periferico") == 0) {
+        printf("Categoria: Periferico\n");
+    } else {
+        printf("Categoria: Hardware\n");
+    }
+
+    printf("Descricao: %s\n", descricao);
+    printf("Cadastro concluido!\n");
+
+    return 0;
+}
