@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <string.h>
+
+int main(void) {
+    char nome[50];
+    char codigo[10];
+    char nome_copia[50];
+    char saudacao[70] = "Ola, ";
+
+    printf("===== IDENTIFICACAO ACADEMICA =====\n");
+    printf("Nome do estudante: ");
+    scanf("%49s", nome);
+    printf("Codigo do curso: ");
+    scanf("%9s", codigo);
+
+    strcpy(nome_copia, nome);
+
+    printf("\n===== RESULTADO =====\n");
+    printf("Estudante: %s\n", nome_copia);
+
+    // Aceita tanto "CC" quanto "cc" / "SI" quanto "si"
+    if (strcmp(codigo, "CC") == 0 || strcmp(codigo, "cc") == 0) {
+        printf("Curso: Ciencia da Computacao\n");
+    } else if (strcmp(codigo, "SI") == 0 || strcmp(codigo, "si") == 0) {
+        printf("Curso: Sistemas de Informacao\n");
+    }
+
+    printf("Caracteres no nome: %zu\n\n", strlen(nome));
+
+    strcat(saudacao, nome);
+    strcat(saudacao, "!");
+
+    printf("%s\n", saudacao);
+
+    return 0;
+}
