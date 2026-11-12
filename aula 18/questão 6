@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+long long calcularFatorial(int n);
+
+int main(void) {
+    int num;
+
+    printf("===== CALCULADORA DE FATORIAL =====\n");
+    printf("Digite um numero (entre 0 e 12): ");
+    scanf("%d", &num);
+
+    if (num < 0 || num > 12) {
+        printf("Por favor, digite um numero valido entre 0 e 12.\n");
+    } else {
+        long long resultado = calcularFatorial(num);
+        printf("\nFatorial de %d = %lld\n", num, resultado);
+    }
+
+    return 0;
+}
+
+long long calcularFatorial(int n) {
+    long long fatorial = 1;
+    for (int i = 1; i <= n; i++) {
+        fatorial *= i;
+    }
+    return fatorial;
+}
