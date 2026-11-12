@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int verificarPar(int numero);
+
+int main(void) {
+    int num;
+
+    printf("===== VERIFICADOR DE NUMEROS =====\n");
+    printf("Digite um numero: ");
+    scanf("%d", &num);
+
+    if (verificarPar(num) == 1) {
+        printf("O numero %d e par.\n", num);
+    } else {
+        printf("O numero %d e impar.\n", num);
+    }
+
+    return 0;
+}
+
+int verificarPar(int numero) {
+    if (numero % 2 == 0) {
+        return 1;
+    } else {
+        return 0;
+    }
+}
