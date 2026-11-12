@@ -1,6 +1,5 @@
 #include <stdio.h>
 
-// Protótipos das funções
 void exibirMenu(void);
 float somar(float a, float b);
 float subtrair(float a, float b);
