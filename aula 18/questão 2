@@ -1,6 +1,5 @@
 #include <stdio.h>
 
-// Protótipo da função
 float maiorPreco(float p1, float p2);
 
 int main(void) {
